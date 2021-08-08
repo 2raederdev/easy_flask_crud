@@ -7,17 +7,13 @@ from flask import redirect
 
 from flask_sqlalchemy import SQLAlchemy
 
-# from src.models.bookmanager import Book
 
-# We define where the project path is and set up a database file with its full path and the sqlite:/// prefix to tell SQLAlchemy the database engine we're using.
 project_dir = os.path.dirname(os.path.abspath(__file__))
 database_file = "sqlite:///{}".format(os.path.join(project_dir, "bookdatabase.db"))
 
 app = Flask(__name__)
-# We tell the app where the database will be stored
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 
-#We initialize a connection to the data base and keep this in the "db" variable to interact with the database.
 db = SQLAlchemy(app)
 
 

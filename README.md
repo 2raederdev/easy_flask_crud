@@ -18,7 +18,7 @@ To start the app, run python3 bookmanager.py in the console from the app root di
 
 ## Initializing the database
 
-Run the following commands in a Python shell in your project directory in order to create the database and create the book table where the books will be stored.
+Run the following commands in a Python shell in the project directory in order to create the database and create the book table where the books will be stored.
 
 $ from bookmanager import db
 $ db.create_all()
